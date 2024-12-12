@@ -5,17 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Acceso a los Datos</title>
-<script>
-	function toggleInputFields() {
-		const operacion = document.querySelector('select[name="operacion"]').value;
-		const datosInput = document.getElementById('datosInput');
-		if (operacion === 'escritura') {
-			datosInput.style.display = 'block';
-		} else {
-			datosInput.style.display = 'none';
-		}
-	}
-</script>
 </head>
 <body>
 	<form action="ServletFich" method="post">
@@ -25,8 +14,11 @@
 		</select> </br> </br> <label for="operacion">Operación:</label> <select name="operacion">
 			<option value="lectura">Lectura</option>
 			<option value="escritura">Escritura</option>
-		</select><input type="text" name="datos" required></br> </br> <label for="ruta">Ruta del fichero:</label> <input type="text"
-			name="ruta" required> <input type="submit" value="Enviar">
+		</select></br> </br>
+		<input type="text" name="datos" placeholder="Dato1" required></br>
+		</br> <label for="ruta">Ruta del fichero:</label> <input type="text"
+			name="ruta" placeholder=""> <input type="submit"
+			value="Enviar">
 	</form>
 </body>
 </html>
